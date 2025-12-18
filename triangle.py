@@ -3,11 +3,13 @@ def area(a, h):
             
             Параметры:
                 a (float): длина основания треугольника
-                b (float): длина высоты треугольника
+                h (float): длина высоты треугольника
                 
             Возвращаемое значение:
                 triangle_area (float): значение площади треугольника
     '''
+    if a < 0 or h < 0:
+        raise ValueError("Стороны не могут быть отрицательными")
     return a * h / 2 
 
 def perimeter(a, b, c):
@@ -21,4 +23,6 @@ def perimeter(a, b, c):
             Возвращаемое значение:
                 triangle_area (float): значение периметра треугольника
     '''
+    if a < 0 or b < 0 or c < 0:
+        raise ValueError("Стороны не могут быть отрицательными")
     return a + b + c
